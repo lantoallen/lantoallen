@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 320" width="100%" height="100%" style="max-width: 850px;">
+    <defs>
+        <style>
+            /* Embedded CSS for GitHub SVG Support */
+            @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap');
+            
+            .bg { fill: #0D1117; }
+            .text-main { font-family: 'Space Mono', 'Courier New', monospace; fill: #FFB8D1; font-size: 16px; font-weight: bold; }
+            .text-sub { font-family: 'Space Mono', 'Courier New', monospace; fill: #E6CCFF; font-size: 14px; }
+            .text-accent { font-family: 'Space Mono', 'Courier New', monospace; fill: #8be9fd; font-size: 13px; letter-spacing: 1px; }
+
+            /* Keyframe Animations */
+            @keyframes scan-laser {
+                0% { transform: translateY(-30px); opacity: 0; }
+                15% { opacity: 1; }
+                35% { transform: translateY(180px); opacity: 1; }
+                50% { transform: translateY(-30px); opacity: 0; }
+                100% { transform: translateY(-30px); opacity: 0; }
+            }
+            .laser-beam { animation: scan-laser 8s infinite; fill: url(#laser-grad); }
+            .laser-line { animation: scan-laser 8s infinite; }
+
+            @keyframes spin-cw { 100% { transform: rotate(360deg); } }
+            @keyframes spin-ccw { 100% { transform: rotate(-360deg); } }
+            
+            .ring-cw { transform-origin: 150px 160px; animation: spin-cw 6s linear infinite; }
+            .ring-ccw { transform-origin: 150px 160px; animation: spin-ccw 8s linear infinite; }
+
+            @keyframes pulse-glow {
+                0%, 100% { opacity: 0.5; filter: drop-shadow(0 0 2px #E6CCFF); }
+                50% { opacity: 1; filter: drop-shadow(0 0 8px #FFB8D1); }
+            }
+            .avatar-pulse { animation: pulse-glow 2s infinite; }
+
+            @keyframes sequence-fade {
+                0%, 35% { opacity: 0; transform: translateX(-15px); }
+                40%, 95% { opacity: 1; transform: translateX(0); }
+                100% { opacity: 0; }
+            }
+            /* Staggered text reveal */
+            .seq-1 { animation: sequence-fade 8s infinite; animation-delay: 2.8s; opacity: 0; }
+            .seq-2 { animation: sequence-fade 8s infinite; animation-delay: 3.1s; opacity: 0; }
+            .seq-3 { animation: sequence-fade 8s infinite; animation-delay: 3.4s; opacity: 0; }
+            .seq-4 { animation: sequence-fade 8s infinite; animation-delay: 3.7s; opacity: 0; }
+            .seq-5 { animation: sequence-fade 8s infinite; animation-delay: 4.0s; opacity: 0; }
+
+            @keyframes blink-status {
+                0%, 34% { opacity: 1; }
+                35%, 39% { opacity: 0; }
+                40%, 95% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            .status-scan { animation: blink-status 8s infinite; }
+            
+            @keyframes show-verified {
+                0%, 39% { opacity: 0; }
+                40%, 95% { opacity: 1; filter: drop-shadow(0 0 5px #8be9fd); }
+                100% { opacity: 0; }
+            }
+            .status-verified { animation: show-verified 8s infinite; opacity: 0; }
+        </style>
+
+        <linearGradient id="laser-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFB8D1" stop-opacity="0" />
+            <stop offset="50%" stop-color="#FFB8D1" stop-opacity="0.6" />
+            <stop offset="100%" stop-color="#FFB8D1" stop-opacity="0" />
+        </linearGradient>
+        
+        <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
+            <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#E6CCFF" stroke-width="0.5" stroke-opacity="0.08"/>
+        </pattern>
+    </defs>
+
+    <!-- Base Background -->
+    <rect width="100%" height="100%" rx="12" class="bg" />
+    <rect width="100%" height="100%" fill="url(#grid)" rx="12" />
+
+    <!-- Tech Borders & Corner Accents -->
+    <rect x="15" y="15" width="820" height="290" rx="8" fill="none" stroke="#4d2d54" stroke-width="2" />
+    <path d="M 35 15 L 80 15 M 815 60 L 815 35 L 790 35" stroke="#FFB8D1" stroke-width="3" fill="none" stroke-linecap="round" />
+    <path d="M 35 305 L 80 305 M 815 260 L 815 305 L 790 305" stroke="#8be9fd" stroke-width="3" fill="none" stroke-linecap="round" />
+
+    <!-- ================= LEFT PANEL: BIOMETRIC RADAR ================= -->
+    <g>
+        <path d="M 15 160 L 35 160 M 265 160 L 285 160" stroke="#E6CCFF" stroke-width="1" stroke-opacity="0.5"/>
+        
+        <circle cx="150" cy="160" r="100" fill="none" stroke="#2D1B36" stroke-width="2" />
+        <circle cx="150" cy="160" r="115" fill="none" stroke="#E6CCFF" stroke-width="1.5" stroke-dasharray="10 15 5 15" class="ring-cw" />
+        <circle cx="150" cy="160" r="85" fill="none" stroke="#FFB8D1" stroke-width="2" stroke-dasharray="30 15 10 20" class="ring-ccw" stroke-opacity="0.8"/>
+        <circle cx="150" cy="160" r="70" fill="none" stroke="#8be9fd" stroke-width="1" stroke-dasharray="2 6" class="ring-cw" />
+
+        <g stroke="#E6CCFF" fill="none" stroke-width="2" class="avatar-pulse">
+            <circle cx="150" cy="130" r="28" />
+            <path d="M 95 215 C 95 165 205 165 205 215" stroke-linecap="round"/>
+            <circle cx="150" cy="130" r="4" fill="#FFB8D1" stroke="none" />
+            <circle cx="120" cy="190" r="3" fill="#8be9fd" stroke="none" />
+            <circle cx="180" cy="190" r="3" fill="#8be9fd" stroke="none" />
+        </g>
+
+        <rect x="30" y="150" width="240" height="40" class="laser-beam" />
+        <line x1="25" y1="170" x2="275" y2="170" stroke="#FFB8D1" stroke-width="2" class="laser-line" filter="drop-shadow(0 0 4px #FFB8D1)"/>
+    </g>
+
+    <!-- ================= RIGHT PANEL: DATA STREAM ================= -->
+    <g transform="translate(320, 55)">
+        
+        <text x="0" y="0" class="text-accent status-scan">&gt; INITIATING BIOMETRIC_SCAN.EXE...</text>
+        <text x="0" y="0" class="text-accent status-verified" fill="#8be9fd">&gt; IDENTITY VERIFIED. ACCESS GRANTED.</text>
+        <line x1="0" y1="15" x2="470" y2="15" stroke="#4d2d54" stroke-width="2" />
+
+        <g class="seq-1">
+            <text x="0" y="50" class="text-main">TARGET_ID :</text>
+            <text x="120" y="50" class="text-sub" fill="#fff" font-size="18" font-weight="bold">ALLEN LANTO</text>
+            <rect x="440" y="38" width="30" height="15" fill="#4d2d54" />
+            <rect x="440" y="38" width="10" height="15" fill="#FFB8D1" class="avatar-pulse" />
+        </g>
+
+        <g class="seq-2">
+            <text x="0" y="85" class="text-main">ROLE_     :</text>
+            <text x="120" y="85" class="text-sub">COMPUTER SCIENCE STUDENT</text>
+        </g>
+
+        <g class="seq-3">
+            <text x="0" y="120" class="text-main">CLASS_    :</text>
+            <text x="120" y="120" class="text-sub" fill="#8be9fd">ASPIRING FULL-STACK DEVELOPER</text>
+        </g>
+
+        <g class="seq-4">
+            <text x="0" y="155" class="text-main">SYS_STATE :</text>
+            <rect x="120" y="140" width="75" height="20" fill="#FFB8D1" rx="4" />
+            <text x="128" y="154" font-family="'Space Mono', monospace" font-size="13" fill="#0D1117" font-weight="bold">ONLINE</text>
+            <text x="210" y="155" class="text-sub">// COMPILING PORTFOLIO MODULES</text>
+        </g>
+
+        <g class="seq-5" transform="translate(0, 195)">
+            <text x="0" y="0" class="text-accent" font-size="11">LOADING_SKILLS [||||||||||||||||] 100%</text>
+
+            <text x="0" y="25" class="text-sub" font-size="12">FRONTEND</text>
+            <rect x="75" y="18" width="140" height="6" fill="#2D1B36" rx="3" />
+            <rect x="75" y="18" width="120" height="6" fill="#FFB8D1" rx="3" filter="drop-shadow(0 0 2px #FFB8D1)" />
+
+            <text x="250" y="25" class="text-sub" font-size="12">BACKEND</text>
+            <rect x="315" y="18" width="140" height="6" fill="#2D1B36" rx="3" />
+            <rect x="315" y="18" width="95" height="6" fill="#E6CCFF" rx="3" filter="drop-shadow(0 0 2px #E6CCFF)" />
+
+            <text x="0" y="45" class="text-sub" font-size="12">DATABASE</text>
+            <rect x="75" y="38" width="140" height="6" fill="#2D1B36" rx="3" />
+            <rect x="75" y="38" width="85" height="6" fill="#8be9fd" rx="3" filter="drop-shadow(0 0 2px #8be9fd)" />
+
+            <text x="250" y="45" class="text-sub" font-size="12">UI/UX</text>
+            <rect x="315" y="38" width="140" height="6" fill="#2D1B36" rx="3" />
+            <rect x="315" y="38" width="130" height="6" fill="#FFB8D1" rx="3" filter="drop-shadow(0 0 2px #FFB8D1)" />
+        </g>
+    </g>
+</svg>
