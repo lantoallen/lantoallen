@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 310" width="100%" height="100%" style="max-width: 850px;">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap');
+            .bg { fill: #0D1117; }
+            .category-title { font-family: 'Space Mono', monospace; fill: #FFB8D1; font-size: 13px; font-weight: bold; letter-spacing: 1px; }
+        </style>
+        <pattern id="grid-tech" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#E6CCFF" stroke-width="0.5" stroke-opacity="0.04"/>
+        </pattern>
+    </defs>
+
+    <!-- Card Background with Neon Pink Glow Border -->
+    <rect width="100%" height="100%" rx="12" class="bg" />
+    <rect width="100%" height="100%" fill="url(#grid-tech)" rx="12" />
+    <rect x="10" y="10" width="830" height="290" rx="8" fill="none" stroke="#FFB8D1" stroke-width="2" filter="drop-shadow(0 0 6px rgba(255, 184, 209, 0.3))" />
+
+    <!-- Section 1: Languages -->
+    <g transform="translate(35, 50)">
+        <text x="0" y="5" class="category-title">&gt; LANGUAGES</text>
+        <g transform="translate(190, -10)">
+            <image href="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&amp;logo=javascript&amp;logoColor=0D1117" width="115" height="28" />
+            <image href="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white" width="100" height="28" x="123" />
+            <image href="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&amp;logo=java&amp;logoColor=white" width="85" height="28" x="231" />
+            <image href="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&amp;logo=html5&amp;logoColor=white" width="90" height="28" x="324" />
+            <image href="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&amp;logo=css3&amp;logoColor=white" width="85" height="28" x="422" />
+        </g>
+    </g>
+
+    <!-- Section 2: Frontend & UI/UX -->
+    <g transform="translate(35, 125)">
+        <text x="0" y="5" class="category-title">&gt; FRONTEND &amp; UI/UX</text>
+        <g transform="translate(190, -10)">
+            <image href="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&amp;logo=react&amp;logoColor=0D1117" width="90" height="28" />
+            <image href="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&amp;logo=figma&amp;logoColor=white" width="90" height="28" x="98" />
+        </g>
+    </g>
+
+    <!-- Section 3: Backend & APIs -->
+    <g transform="translate(35, 200)">
+        <text x="0" y="5" class="category-title">&gt; BACKEND &amp; APIs</text>
+        <g transform="translate(190, -10)">
+            <image href="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&amp;logo=express&amp;logoColor=white" width="115" height="28" />
+        </g>
+    </g>
+
+    <!-- Section 4: Cloud & Data -->
+    <g transform="translate(35, 275)">
+        <text x="0" y="5" class="category-title">&gt; CLOUD &amp; DATA</text>
+        <g transform="translate(190, -10)">
+            <image href="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&amp;logo=supabase&amp;logoColor=white" width="110" height="28" />
+        </g>
+    </g>
+</svg>
