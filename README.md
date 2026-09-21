@@ -1,7 +1,24 @@
 <div align="center">
-  <img src="profile-scan.svg" alt="Profile Scan Animation" width="100%">
+  <!-- Dynamic Biometric Profile Scan -->
+  <img src="profile-scan.svg?v=7" alt="Profile Scan Animation" width="100%">
 </div>
 
+<br>
+
+<div align="center">
+  <!-- Contact & Social Action Buttons -->
+  <a href="mailto:lantoallen07@gmail.com">
+    <img src="https://img.shields.io/badge/Email-FFB8D1?style=for-the-badge&logo=gmail&logoColor=0D1117" alt="Email" />
+  </a>&nbsp;&nbsp;
+  <a href="https://lantoallen.github.io/my-portfolio/">
+    <img src="https://img.shields.io/badge/Portfolio-8be9fd?style=for-the-badge&logo=githubpages&logoColor=0D1117" alt="Portfolio" />
+  </a>&nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/allen-edeline-mari-lanto-622855424/">
+    <img src="https://img.shields.io/badge/LinkedIn-E6CCFF?style=for-the-badge&logo=linkedin&logoColor=0D1117" alt="LinkedIn" />
+  </a>
+</div>
+
+<br>
 <br>
 
 <div align="center">
@@ -15,36 +32,18 @@
 
 <br>
 
-<div align="center">
-  <!-- Pastel Pink and Lavender GitHub Stats -->
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=lantoallen&show_icons=true&hide_border=true&bg_color=0D1117&title_color=E6CCFF&icon_color=FFB8D1&text_color=c9d1d9" alt="Allen's GitHub Stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lantoallen&layout=compact&hide_border=true&bg_color=0D1117&title_color=FFB8D1&text_color=c9d1d9" alt="Top Languages" />
-</div>
-
-<br>
-
 ### ✨ Current Focus
-*   **Building:** Small, clean web applications, focusing on responsive one-page sites and interactive features.
-*   **Learning:** Deepening my understanding of `Express.js`, `Supabase`, and full-stack integration.
+*   **Building:** Modern, user-centric web and mobile applications from concept to production-ready code.
+*   **Learning:** Expanding full-stack capabilities, bridging the gap between intuitive UI/UX design and robust backend logic.
 
 ### 🛠️ The Toolbox
-<div align="left">
-  <!-- Core Languages -->
-  <img height="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"/>&nbsp;&nbsp;
-  <img height="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/>&nbsp;&nbsp;
-  <img height="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>&nbsp;&nbsp;
-  <!-- Web & Design -->
-  <img height="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"/>&nbsp;&nbsp;
-  <img height="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"/>&nbsp;&nbsp;
-  <img height="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"/>&nbsp;&nbsp;
-  <!-- Backend & Tools -->
-  <img height="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js"/>&nbsp;&nbsp;
-  <img height="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="Supabase"/>
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=java,python,js,html,css,figma,express,supabase&theme=dark" alt="My Tech Stack" />
 </div>
 
 <br>
 
-<!-- THE SNAKE WILL GO HERE -->
+<!-- Contribution Snake Animation -->
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lantoallen/lantoallen/output/github-contribution-grid-snake-dark.svg">
