@@ -47,46 +47,20 @@
 <br>
 <br>
 
-<!-- Styled Section: Tech Stack & Toolbox Grid with Pink Outlines -->
+<!-- Creative Element: Custom Tech Stack SVG Card with Pink Neon Border -->
 <div align="center">
   <h3>🛠️ Tech Stack & Toolbox</h3>
   <p><em>The technologies and design systems powering my journey</em></p>
+  <br>
+  <img src="tech-stack.svg?v=4" alt="Tech Stack Card" width="100%">
 </div>
 
 <br>
+<br>
 
+<!-- Creative Element: Pastel-themed GitHub Streak Stats -->
 <div align="center">
-  <table align="center" width="100%" style="border: 2px solid #FFB8D1; border-radius: 12px; border-collapse: separate; border-spacing: 0; background-color: #0D1117; box-shadow: 0 0 15px rgba(255, 184, 209, 0.1);">
-    <tr style="border-bottom: 1px solid rgba(255, 184, 209, 0.2);">
-      <td align="center" width="30%" style="padding: 20px; border-right: 1px solid rgba(255, 184, 209, 0.2); color: #FFB8D1; font-weight: bold;">💻 Languages</td>
-      <td align="left" style="padding: 20px;">
-        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=0D1117" alt="JavaScript" />&nbsp;&nbsp;
-        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />&nbsp;&nbsp;
-        <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java" />&nbsp;&nbsp;
-        <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />&nbsp;&nbsp;
-        <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-      </td>
-    </tr>
-    <tr style="border-bottom: 1px solid rgba(255, 184, 209, 0.2);">
-      <td align="center" width="30%" style="padding: 20px; border-right: 1px solid rgba(255, 184, 209, 0.2); color: #FFB8D1; font-weight: bold;">🎨 Frontend & UI/UX</td>
-      <td align="left" style="padding: 20px;">
-        <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=0D1117" alt="React" />&nbsp;&nbsp;
-        <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
-      </td>
-    </tr>
-    <tr style="border-bottom: 1px solid rgba(255, 184, 209, 0.2);">
-      <td align="center" width="30%" style="padding: 20px; border-right: 1px solid rgba(255, 184, 209, 0.2); color: #FFB8D1; font-weight: bold;">⚙️ Backend & APIs</td>
-      <td align="left" style="padding: 20px;">
-        <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" />
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="30%" style="padding: 20px; border-right: 1px solid rgba(255, 184, 209, 0.2); color: #FFB8D1; font-weight: bold;">☁️ Cloud & Data</td>
-      <td align="left" style="padding: 20px;">
-        <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" />
-      </td>
-    </tr>
-  </table>
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=lantoallen&theme=dark&background=0D1117&border=FFB8D1&stroke=FFB8D1&sideRing=FFB8D1&currStreakNum=FFB8D1&fire=FFB8D1&sideNums=E6CCFF&dates=8be9fd" alt="GitHub Streak" />
 </div>
 
 <br>
