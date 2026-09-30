@@ -47,37 +47,58 @@
     </g>
 
     <!-- Section 2: Frontend & UI/UX -->
-    <g transform="translate(35, 115)">
-        <text x="0" y="15" class="category-title">&gt; FRONTEND &amp; UI/UX</text>
-        <!-- React -->
-        <g transform="translate(180, 0)">
-            <rect width="90" height="26" rx="6" fill="#21262d" stroke="#61DAFB" stroke-width="1"/>
-            <text x="45" y="17" fill="#61DAFB" text-anchor="middle" class="pill-text">REACT</text>
-        </g>
-        <!-- Figma -->
-        <g transform="translate(280, 0)">
-            <rect width="90" height="26" rx="6" fill="#21262d" stroke="#F24E1E" stroke-width="1"/>
-            <text x="45" y="17" fill="#F24E1E" text-anchor="middle" class="pill-text">FIGMA</text>
-        </g>
+<g transform="translate(35, 115)">
+    <text x="0" y="15" class="category-title">&gt; FRONTEND &amp; UI/UX</text>
+
+    <!-- HTML5 -->
+    <g transform="translate(180, 0)">
+        <rect width="85" height="26" rx="6" fill="#21262d" stroke="#E34F26" stroke-width="1"/>
+        <text x="42" y="17" fill="#E34F26" text-anchor="middle" class="pill-text">HTML5</text>
     </g>
 
-    <!-- Section 3: Backend & APIs -->
-    <g transform="translate(35, 185)">
-        <text x="0" y="15" class="category-title">&gt; BACKEND &amp; APIs</text>
-        <!-- Express.js -->
-        <g transform="translate(180, 0)">
-            <rect width="110" height="26" rx="6" fill="#21262d" stroke="#E6CCFF" stroke-width="1"/>
-            <text x="55" y="17" fill="#E6CCFF" text-anchor="middle" class="pill-text">EXPRESS.JS</text>
-        </g>
+    <!-- CSS3 -->
+    <g transform="translate(275, 0)">
+        <rect width="80" height="26" rx="6" fill="#21262d" stroke="#1572B6" stroke-width="1"/>
+        <text x="40" y="17" fill="#1572B6" text-anchor="middle" class="pill-text">CSS3</text>
     </g>
 
-    <!-- Section 4: Cloud & Data -->
-    <g transform="translate(35, 255)">
-        <text x="0" y="15" class="category-title">&gt; CLOUD &amp; DATA</text>
-        <!-- Supabase -->
-        <g transform="translate(180, 0)">
-            <rect width="105" height="26" rx="6" fill="#21262d" stroke="#3ECF8E" stroke-width="1"/>
-            <text x="52" y="17" fill="#3ECF8E" text-anchor="middle" class="pill-text">SUPABASE</text>
-        </g>
+    <!-- Figma -->
+    <g transform="translate(365, 0)">
+        <rect width="90" height="26" rx="6" fill="#21262d" stroke="#F24E1E" stroke-width="1"/>
+        <text x="45" y="17" fill="#F24E1E" text-anchor="middle" class="pill-text">FIGMA</text>
     </g>
-</svg>
+</g>
+
+<!-- Section 3: Backend & APIs -->
+<g transform="translate(35, 185)">
+    <text x="0" y="15" class="category-title">&gt; BACKEND &amp; APIs</text>
+
+    <!-- APIs -->
+    <g transform="translate(180, 0)">
+        <rect width="80" height="26" rx="6" fill="#21262d" stroke="#B5A4D6" stroke-width="1"/>
+        <text x="40" y="17" fill="#B5A4D6" text-anchor="middle" class="pill-text">APIs</text>
+    </g>
+
+    <!-- Supabase -->
+    <g transform="translate(270, 0)">
+        <rect width="105" height="26" rx="6" fill="#21262d" stroke="#3ECF8E" stroke-width="1"/>
+        <text x="52" y="17" fill="#3ECF8E" text-anchor="middle" class="pill-text">SUPABASE</text>
+    </g>
+
+    <!-- Databases -->
+    <g transform="translate(385, 0)">
+        <rect width="110" height="26" rx="6" fill="#21262d" stroke="#FFB8D1" stroke-width="1"/>
+        <text x="55" y="17" fill="#FFB8D1" text-anchor="middle" class="pill-text">DATABASES</text>
+    </g>
+</g>
+
+<!-- Section 4: Cloud & Deployment -->
+<g transform="translate(35, 255)">
+    <text x="0" y="15" class="category-title">&gt; CLOUD &amp; DEPLOYMENT</text>
+
+    <!-- Vercel -->
+    <g transform="translate(220, 0)">
+        <rect width="90" height="26" rx="6" fill="#21262d" stroke="#E6CCFF" stroke-width="1"/>
+        <text x="45" y="17" fill="#E6CCFF" text-anchor="middle" class="pill-text">VERCEL</text>
+    </g>
+</g>
