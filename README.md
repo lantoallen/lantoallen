@@ -52,7 +52,7 @@
   <h3>🛠️ Tech Stack & Toolbox</h3>
   <p><em>The technologies and design systems powering my journey</em></p>
   <br>
-  <img src="tech-stack.svg?v=4" alt="Tech Stack Card" width="100%">
+  <img src="tech-stack.svg?v=5" alt="Tech Stack Card" width="100%">
 </div>
 
 <br>
@@ -60,7 +60,7 @@
 
 <!-- Creative Element: Pastel-themed GitHub Streak Stats -->
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=lantoallen&theme=dark&background=0D1117&border=FFB8D1&stroke=FFB8D1&sideRing=FFB8D1&currStreakNum=FFB8D1&fire=FFB8D1&sideNums=E6CCFF&dates=8be9fd" alt="GitHub Streak" />
+  <img src="https://streak-stats.demolab.com/?user=lantoallen&theme=dark&background=0D1117&border=FFB8D1&stroke=FFB8D1&sideRing=FFB8D1&currStreakNum=FFB8D1&fire=FFB8D1&sideNums=E6CCFF&dates=8be9fd" alt="GitHub Streak" />
 </div>
 
 <br>
