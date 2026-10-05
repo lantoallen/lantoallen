@@ -1,156 +1,136 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 320" width="100%" height="100%" style="max-width: 850px;">
-    <defs>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap');
-            
-            .bg { fill: #0D1117; }
-            .text-main { font-family: 'Space Mono', 'Courier New', monospace; fill: #FFB8D1; font-size: 16px; font-weight: bold; }
-            .text-sub { font-family: 'Space Mono', 'Courier New', monospace; fill: #E6CCFF; font-size: 14px; }
-            .text-accent { font-family: 'Space Mono', 'Courier New', monospace; fill: #8be9fd; font-size: 13px; letter-spacing: 1px; }
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 336" width="100%" height="100%" style="max-width: 850px;">
+  <defs>
+    <style>
+      .bg { fill: #0D1117; }
+      .mono { font-family: 'Space Mono','SFMono-Regular',Consolas,'Liberation Mono',Menlo,'Courier New',monospace; }
+      .title { font-family: 'Space Mono','SFMono-Regular',Consolas,'Liberation Mono',Menlo,'Courier New',monospace; fill: #8b949e; font-size: 12px; letter-spacing: 1px; }
+      .cat { font-family: 'Space Mono','SFMono-Regular',Consolas,'Liberation Mono',Menlo,'Courier New',monospace; fill: #FFB8D1; font-size: 12px; font-weight: bold; letter-spacing: 1.5px; }
+      .pill-text { font-family: 'Space Mono','SFMono-Regular',Consolas,'Liberation Mono',Menlo,'Courier New',monospace; font-size: 11px; font-weight: bold; letter-spacing: 0.3px; }
+      @keyframes pop { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+      .pill { animation: pop 0.5s ease-out both; }
+      @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+      .cursor { animation: blink 1.2s steps(1) infinite; }
+    </style>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFB8D1" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#E6CCFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB8D1"/>
+      <stop offset="0.5" stop-color="#E6CCFF"/>
+      <stop offset="1" stop-color="#8be9fd"/>
+    </linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#E6CCFF" stroke-width="0.5" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
 
-            /* Slowed down the laser sweep */
-            @keyframes scan-laser {
-                0% { transform: translateY(-30px); opacity: 0; }
-                15% { opacity: 1; }
-                35% { transform: translateY(180px); opacity: 1; }
-                50% { transform: translateY(-30px); opacity: 0; }
-                100% { transform: translateY(-30px); opacity: 0; }
-            }
-            .laser-beam { animation: scan-laser 12s infinite; fill: url(#laser-grad); }
-            .laser-line { animation: scan-laser 12s infinite; }
+  <rect width="850" height="336" rx="14" class="bg"/>
+  <rect width="850" height="336" rx="14" fill="url(#grid)"/>
+  <rect x="1.5" y="1.5" width="847" height="333" rx="13" fill="none" stroke="url(#border)" stroke-width="1.5" stroke-opacity="0.85"/>
 
-            /* Slowed down the spinning rings for a calmer vibe */
-            @keyframes spin-cw { 100% { transform: rotate(360deg); } }
-            @keyframes spin-ccw { 100% { transform: rotate(-360deg); } }
-            
-            .ring-cw { transform-origin: 150px 160px; animation: spin-cw 8s linear infinite; }
-            .ring-ccw { transform-origin: 150px 160px; animation: spin-ccw 10s linear infinite; }
+  <!-- Terminal title bar -->
+  <circle cx="30" cy="26" r="5" fill="#FFB8D1"/>
+  <circle cx="50" cy="26" r="5" fill="#E6CCFF"/>
+  <circle cx="70" cy="26" r="5" fill="#8be9fd"/>
+  <text x="96" y="30" class="title">~/allen/tech-stack</text>
+  <rect x="252" y="21" width="8" height="14" fill="#FFB8D1" class="cursor"/>
+  <line x1="1.5" y1="48" x2="848.5" y2="48" stroke="#E6CCFF" stroke-opacity="0.12"/>
 
-            @keyframes pulse-glow {
-                0%, 100% { opacity: 0.5; filter: drop-shadow(0 0 2px #E6CCFF); }
-                50% { opacity: 1; filter: drop-shadow(0 0 8px #FFB8D1); }
-            }
-            .avatar-pulse { animation: pulse-glow 2s infinite; }
-
-            /* Extended text display time: fades in by 25%, stays visible until 95% */
-            @keyframes sequence-fade {
-                0%, 20% { opacity: 0; }
-                25%, 95% { opacity: 1; }
-                100% { opacity: 0; }
-            }
-            
-            /* Increased total loop to 16 seconds */
-            .seq-1 { animation: sequence-fade 16s infinite; animation-delay: 3.0s; opacity: 0; }
-            .seq-2 { animation: sequence-fade 16s infinite; animation-delay: 3.4s; opacity: 0; }
-            .seq-3 { animation: sequence-fade 16s infinite; animation-delay: 3.8s; opacity: 0; }
-            .seq-4 { animation: sequence-fade 16s infinite; animation-delay: 4.2s; opacity: 0; }
-            .seq-5 { animation: sequence-fade 16s infinite; animation-delay: 4.6s; opacity: 0; }
-
-            @keyframes blink-status {
-                0%, 20% { opacity: 1; }
-                21%, 23% { opacity: 0; }
-                24%, 95% { opacity: 1; }
-                100% { opacity: 0; }
-            }
-            .status-scan { animation: blink-status 16s infinite; }
-            
-            @keyframes show-verified {
-                0%, 23% { opacity: 0; }
-                24%, 95% { opacity: 1; filter: drop-shadow(0 0 5px #8be9fd); }
-                100% { opacity: 0; }
-            }
-            .status-verified { animation: show-verified 16s infinite; opacity: 0; }
-        </style>
-
-        <linearGradient id="laser-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#FFB8D1" stop-opacity="0" />
-            <stop offset="50%" stop-color="#FFB8D1" stop-opacity="0.6" />
-            <stop offset="100%" stop-color="#FFB8D1" stop-opacity="0" />
-        </linearGradient>
-        
-        <pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse">
-            <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#E6CCFF" stroke-width="0.5" stroke-opacity="0.08"/>
-        </pattern>
-    </defs>
-
-    <rect width="100%" height="100%" rx="12" class="bg" />
-    <rect width="100%" height="100%" fill="url(#grid)" rx="12" />
-
-    <!-- BORDERS -->
-    <rect x="15" y="15" width="820" height="290" rx="8" fill="none" stroke="#4d2d54" stroke-width="2" />
-    <path d="M 35 15 L 80 15 M 815 60 L 815 35 L 790 35" stroke="#FFB8D1" stroke-width="3" fill="none" stroke-linecap="round" />
-    <path d="M 35 305 L 80 305 M 815 260 L 815 305 L 790 305" stroke="#8be9fd" stroke-width="3" fill="none" stroke-linecap="round" />
-
-    <!-- BIOMETRIC RADAR -->
-    <g>
-        <path d="M 15 160 L 35 160 M 265 160 L 285 160" stroke="#E6CCFF" stroke-width="1" stroke-opacity="0.5"/>
-        
-        <circle cx="150" cy="160" r="100" fill="none" stroke="#2D1B36" stroke-width="2" />
-        <circle cx="150" cy="160" r="115" fill="none" stroke="#E6CCFF" stroke-width="1.5" stroke-dasharray="10 15 5 15" class="ring-cw" />
-        <circle cx="150" cy="160" r="85" fill="none" stroke="#FFB8D1" stroke-width="2" stroke-dasharray="30 15 10 20" class="ring-ccw" stroke-opacity="0.8"/>
-        <circle cx="150" cy="160" r="70" fill="none" stroke="#8be9fd" stroke-width="1" stroke-dasharray="2 6" class="ring-cw" />
-
-        <g stroke="#E6CCFF" fill="none" stroke-width="2" class="avatar-pulse">
-            <circle cx="150" cy="130" r="28" />
-            <path d="M 95 215 C 95 165 205 165 205 215" stroke-linecap="round"/>
-            <circle cx="150" cy="130" r="4" fill="#FFB8D1" stroke="none" />
-            <circle cx="120" cy="190" r="3" fill="#8be9fd" stroke="none" />
-            <circle cx="180" cy="190" r="3" fill="#8be9fd" stroke="none" />
-        </g>
-
-        <rect x="30" y="150" width="240" height="40" class="laser-beam" />
-        <line x1="25" y1="170" x2="275" y2="170" stroke="#FFB8D1" stroke-width="2" class="laser-line" filter="drop-shadow(0 0 4px #FFB8D1)"/>
-    </g>
-
-    <!-- COMPACTED DATA STREAM -->
-    <g transform="translate(320, 45)">
-        <text x="0" y="0" class="text-accent status-scan">&gt; INITIATING BIOMETRIC_SCAN.EXE...</text>
-        <text x="0" y="18" class="text-accent status-verified" fill="#8be9fd">&gt; IDENTITY VERIFIED. ACCESS GRANTED.</text>
-        
-        <line x1="0" y1="30" x2="470" y2="30" stroke="#4d2d54" stroke-width="2" />
-
-        <g class="seq-1">
-            <text x="0" y="55" class="text-main">TARGET_ID :</text>
-            <text x="120" y="55" class="text-sub" fill="#fff" font-size="18" font-weight="bold">ALLEN LANTO</text>
-            <rect x="440" y="43" width="30" height="15" fill="#4d2d54" />
-            <rect x="440" y="43" width="10" height="15" fill="#FFB8D1" class="avatar-pulse" />
-        </g>
-
-        <g class="seq-2">
-            <text x="0" y="85" class="text-main">ROLE_     :</text>
-            <text x="120" y="85" class="text-sub">COMPUTER SCIENCE STUDENT</text>
-        </g>
-
-        <g class="seq-3">
-            <text x="0" y="115" class="text-main">CLASS_    :</text>
-            <text x="120" y="115" class="text-sub" fill="#8be9fd">ASPIRING FULL-STACK DEVELOPER</text>
-        </g>
-
-        <g class="seq-4">
-            <text x="0" y="145" class="text-main">SYS_STATE :</text>
-            <rect x="120" y="130" width="75" height="20" fill="#FFB8D1" rx="4" />
-            <text x="128" y="144" font-family="'Space Mono', monospace" font-size="13" fill="#0D1117" font-weight="bold">ONLINE</text>
-            <text x="210" y="145" class="text-sub">// COMPILING PORTFOLIO MODULES</text>
-        </g>
-
-        <g class="seq-5">
-            <text x="0" y="180" class="text-accent" font-size="11">LOADING_SKILLS [||||||||||||||||] 100%</text>
-
-            <text x="0" y="205" class="text-sub" font-size="12">FRONTEND</text>
-            <rect x="75" y="198" width="140" height="6" fill="#2D1B36" rx="3" />
-            <rect x="75" y="198" width="120" height="6" fill="#FFB8D1" rx="3" filter="drop-shadow(0 0 2px #FFB8D1)" />
-
-            <text x="250" y="205" class="text-sub" font-size="12">BACKEND</text>
-            <rect x="315" y="198" width="140" height="6" fill="#2D1B36" rx="3" />
-            <rect x="315" y="198" width="95" height="6" fill="#E6CCFF" rx="3" filter="drop-shadow(0 0 2px #E6CCFF)" />
-
-            <text x="0" y="225" class="text-sub" font-size="12">DATABASE</text>
-            <rect x="75" y="218" width="140" height="6" fill="#2D1B36" rx="3" />
-            <rect x="75" y="218" width="85" height="6" fill="#8be9fd" rx="3" filter="drop-shadow(0 0 2px #8be9fd)" />
-
-            <text x="250" y="225" class="text-sub" font-size="12">UI/UX</text>
-            <rect x="315" y="218" width="140" height="6" fill="#2D1B36" rx="3" />
-            <rect x="315" y="218" width="130" height="6" fill="#FFB8D1" rx="3" filter="drop-shadow(0 0 2px #FFB8D1)" />
-        </g>
-    </g>
+  <text x="30" y="91" class="cat">&gt; LANGUAGES</text>
+  <rect x="30" y="98" width="150" height="2" rx="1" fill="url(#rule)"/>
+  <g transform="translate(250,72)"><g class="pill" style="animation-delay:0.00s">
+    <rect width="109" height="30" rx="8" fill="#F7DF1E" fill-opacity="0.10" stroke="#F7DF1E" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#F7DF1E"/>
+    <text x="26" y="19.5" fill="#F7DF1E" class="pill-text">JAVASCRIPT</text>
+  </g></g>
+  <g transform="translate(369,72)"><g class="pill" style="animation-delay:0.07s">
+    <rect width="81" height="30" rx="8" fill="#5B9BD5" fill-opacity="0.10" stroke="#5B9BD5" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#5B9BD5"/>
+    <text x="26" y="19.5" fill="#5B9BD5" class="pill-text">PYTHON</text>
+  </g></g>
+  <g transform="translate(460,72)"><g class="pill" style="animation-delay:0.14s">
+    <rect width="68" height="30" rx="8" fill="#ED8B00" fill-opacity="0.10" stroke="#ED8B00" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#ED8B00"/>
+    <text x="26" y="19.5" fill="#ED8B00" class="pill-text">JAVA</text>
+  </g></g>
+  <g transform="translate(538,72)"><g class="pill" style="animation-delay:0.21s">
+    <rect width="61" height="30" rx="8" fill="#E6CCFF" fill-opacity="0.10" stroke="#E6CCFF" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#E6CCFF"/>
+    <text x="26" y="19.5" fill="#E6CCFF" class="pill-text">SQL</text>
+  </g></g>
+  <g transform="translate(609,72)"><g class="pill" style="animation-delay:0.28s">
+    <rect width="74" height="30" rx="8" fill="#E34F26" fill-opacity="0.10" stroke="#E34F26" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#E34F26"/>
+    <text x="26" y="19.5" fill="#E34F26" class="pill-text">HTML5</text>
+  </g></g>
+  <g transform="translate(693,72)"><g class="pill" style="animation-delay:0.35s">
+    <rect width="68" height="30" rx="8" fill="#33A9DC" fill-opacity="0.10" stroke="#33A9DC" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#33A9DC"/>
+    <text x="26" y="19.5" fill="#33A9DC" class="pill-text">CSS3</text>
+  </g></g>
+  <line x1="30" y1="122" x2="820" y2="122" stroke="#E6CCFF" stroke-opacity="0.08"/>
+  <text x="30" y="157" class="cat">&gt; BACKEND &amp; APIs</text>
+  <rect x="30" y="164" width="150" height="2" rx="1" fill="url(#rule)"/>
+  <g transform="translate(250,138)"><g class="pill" style="animation-delay:0.42s">
+    <rect width="88" height="30" rx="8" fill="#68A063" fill-opacity="0.10" stroke="#68A063" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#68A063"/>
+    <text x="26" y="19.5" fill="#68A063" class="pill-text">NODE.JS</text>
+  </g></g>
+  <g transform="translate(348,138)"><g class="pill" style="animation-delay:0.49s">
+    <rect width="109" height="30" rx="8" fill="#D0D7DE" fill-opacity="0.10" stroke="#D0D7DE" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#D0D7DE"/>
+    <text x="26" y="19.5" fill="#D0D7DE" class="pill-text">EXPRESS.JS</text>
+  </g></g>
+  <g transform="translate(467,138)"><g class="pill" style="animation-delay:0.56s">
+    <rect width="102" height="30" rx="8" fill="#B5A4D6" fill-opacity="0.10" stroke="#B5A4D6" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#B5A4D6"/>
+    <text x="26" y="19.5" fill="#B5A4D6" class="pill-text">REST APIs</text>
+  </g></g>
+  <g transform="translate(579,138)"><g class="pill" style="animation-delay:0.63s">
+    <rect width="95" height="30" rx="8" fill="#3ECF8E" fill-opacity="0.10" stroke="#3ECF8E" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#3ECF8E"/>
+    <text x="26" y="19.5" fill="#3ECF8E" class="pill-text">SUPABASE</text>
+  </g></g>
+  <line x1="30" y1="188" x2="820" y2="188" stroke="#E6CCFF" stroke-opacity="0.08"/>
+  <text x="30" y="223" class="cat">&gt; DESIGN &amp; TOOLS</text>
+  <rect x="30" y="230" width="150" height="2" rx="1" fill="url(#rule)"/>
+  <g transform="translate(250,204)"><g class="pill" style="animation-delay:0.70s">
+    <rect width="74" height="30" rx="8" fill="#A259FF" fill-opacity="0.10" stroke="#A259FF" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#A259FF"/>
+    <text x="26" y="19.5" fill="#A259FF" class="pill-text">FIGMA</text>
+  </g></g>
+  <g transform="translate(334,204)"><g class="pill" style="animation-delay:0.77s">
+    <rect width="61" height="30" rx="8" fill="#F05032" fill-opacity="0.10" stroke="#F05032" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#F05032"/>
+    <text x="26" y="19.5" fill="#F05032" class="pill-text">GIT</text>
+  </g></g>
+  <g transform="translate(405,204)"><g class="pill" style="animation-delay:0.84s">
+    <rect width="81" height="30" rx="8" fill="#E6EDF3" fill-opacity="0.10" stroke="#E6EDF3" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#E6EDF3"/>
+    <text x="26" y="19.5" fill="#E6EDF3" class="pill-text">GITHUB</text>
+  </g></g>
+  <g transform="translate(496,204)"><g class="pill" style="animation-delay:0.91s">
+    <rect width="88" height="30" rx="8" fill="#4DA3FF" fill-opacity="0.10" stroke="#4DA3FF" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#4DA3FF"/>
+    <text x="26" y="19.5" fill="#4DA3FF" class="pill-text">VS CODE</text>
+  </g></g>
+  <line x1="30" y1="254" x2="820" y2="254" stroke="#E6CCFF" stroke-opacity="0.08"/>
+  <text x="30" y="289" class="cat">&gt; CLOUD &amp; DEPLOYMENT</text>
+  <rect x="30" y="296" width="150" height="2" rx="1" fill="url(#rule)"/>
+  <g transform="translate(250,270)"><g class="pill" style="animation-delay:0.98s">
+    <rect width="81" height="30" rx="8" fill="#E6EDF3" fill-opacity="0.10" stroke="#E6EDF3" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#E6EDF3"/>
+    <text x="26" y="19.5" fill="#E6EDF3" class="pill-text">VERCEL</text>
+  </g></g>
+  <g transform="translate(341,270)"><g class="pill" style="animation-delay:1.05s">
+    <rect width="123" height="30" rx="8" fill="#8be9fd" fill-opacity="0.10" stroke="#8be9fd" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#8be9fd"/>
+    <text x="26" y="19.5" fill="#8be9fd" class="pill-text">GITHUB PAGES</text>
+  </g></g>
+  <g transform="translate(474,270)"><g class="pill" style="animation-delay:1.12s">
+    <rect width="137" height="30" rx="8" fill="#58A6FF" fill-opacity="0.10" stroke="#58A6FF" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#58A6FF"/>
+    <text x="26" y="19.5" fill="#58A6FF" class="pill-text">GITHUB ACTIONS</text>
+  </g></g>
 </svg>
