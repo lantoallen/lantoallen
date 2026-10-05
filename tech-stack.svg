@@ -1,104 +1,136 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 310" width="100%" height="100%" style="max-width: 850px;">
-    <defs>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap');
-            .bg { fill: #0D1117; }
-            .category-title { font-family: 'Space Mono', monospace; fill: #FFB8D1; font-size: 13px; font-weight: bold; letter-spacing: 1px; }
-            .pill-text { font-family: 'Space Mono', monospace; font-size: 11px; font-weight: bold; }
-        </style>
-        <pattern id="grid-tech" width="20" height="20" patternUnits="userSpaceOnUse">
-            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#E6CCFF" stroke-width="0.5" stroke-opacity="0.04"/>
-        </pattern>
-    </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 336" width="100%" height="100%" style="max-width: 850px;">
+  <defs>
+    <style>
+      .bg { fill: #0D1117; }
+      .mono { font-family: 'Space Mono','SFMono-Regular',Consolas,'Liberation Mono',Menlo,'Courier New',monospace; }
+      .title { font-family: 'Space Mono','SFMono-Regular',Consolas,'Liberation Mono',Menlo,'Courier New',monospace; fill: #8b949e; font-size: 12px; letter-spacing: 1px; }
+      .cat { font-family: 'Space Mono','SFMono-Regular',Consolas,'Liberation Mono',Menlo,'Courier New',monospace; fill: #FFB8D1; font-size: 12px; font-weight: bold; letter-spacing: 1.5px; }
+      .pill-text { font-family: 'Space Mono','SFMono-Regular',Consolas,'Liberation Mono',Menlo,'Courier New',monospace; font-size: 11px; font-weight: bold; letter-spacing: 0.3px; }
+      @keyframes pop { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+      .pill { animation: pop 0.5s ease-out both; }
+      @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+      .cursor { animation: blink 1.2s steps(1) infinite; }
+    </style>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFB8D1" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#E6CCFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB8D1"/>
+      <stop offset="0.5" stop-color="#E6CCFF"/>
+      <stop offset="1" stop-color="#8be9fd"/>
+    </linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#E6CCFF" stroke-width="0.5" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
 
-    <!-- Card Background with Neon Pink Glow Border -->
-    <rect width="100%" height="100%" rx="12" class="bg" />
-    <rect width="100%" height="100%" fill="url(#grid-tech)" rx="12" />
-    <rect x="10" y="10" width="830" height="290" rx="8" fill="none" stroke="#FFB8D1" stroke-width="2" filter="drop-shadow(0 0 6px rgba(255, 184, 209, 0.3))" />
+  <rect width="850" height="336" rx="14" class="bg"/>
+  <rect width="850" height="336" rx="14" fill="url(#grid)"/>
+  <rect x="1.5" y="1.5" width="847" height="333" rx="13" fill="none" stroke="url(#border)" stroke-width="1.5" stroke-opacity="0.85"/>
 
-    <!-- Section 1: Languages -->
-    <g transform="translate(35, 45)">
-        <text x="0" y="15" class="category-title">&gt; LANGUAGES</text>
-        <!-- JavaScript -->
-        <g transform="translate(180, 0)">
-            <rect width="115" height="26" rx="6" fill="#21262d" stroke="#F7DF1E" stroke-width="1"/>
-            <text x="57" y="17" fill="#F7DF1E" text-anchor="middle" class="pill-text">JAVASCRIPT</text>
-        </g>
-        <!-- Python -->
-        <g transform="translate(305, 0)">
-            <rect width="95" height="26" rx="6" fill="#21262d" stroke="#3776AB" stroke-width="1"/>
-            <text x="47" y="17" fill="#3776AB" text-anchor="middle" class="pill-text">PYTHON</text>
-        </g>
-        <!-- Java -->
-        <g transform="translate(410, 0)">
-            <rect width="80" height="26" rx="6" fill="#21262d" stroke="#ED8B00" stroke-width="1"/>
-            <text x="40" y="17" fill="#ED8B00" text-anchor="middle" class="pill-text">JAVA</text>
-        </g>
-        <!-- HTML5 -->
-        <g transform="translate(500, 0)">
-            <rect width="85" height="26" rx="6" fill="#21262d" stroke="#E34F26" stroke-width="1"/>
-            <text x="42" y="17" fill="#E34F26" text-anchor="middle" class="pill-text">HTML5</text>
-        </g>
-        <!-- CSS3 -->
-        <g transform="translate(595, 0)">
-            <rect width="80" height="26" rx="6" fill="#21262d" stroke="#1572B6" stroke-width="1"/>
-            <text x="40" y="17" fill="#1572B6" text-anchor="middle" class="pill-text">CSS3</text>
-        </g>
-    </g>
+  <!-- Terminal title bar -->
+  <circle cx="30" cy="26" r="5" fill="#FFB8D1"/>
+  <circle cx="50" cy="26" r="5" fill="#E6CCFF"/>
+  <circle cx="70" cy="26" r="5" fill="#8be9fd"/>
+  <text x="96" y="30" class="title">~/allen/tech-stack</text>
+  <rect x="252" y="21" width="8" height="14" fill="#FFB8D1" class="cursor"/>
+  <line x1="1.5" y1="48" x2="848.5" y2="48" stroke="#E6CCFF" stroke-opacity="0.12"/>
 
-    <!-- Section 2: Frontend & UI/UX -->
-<g transform="translate(35, 115)">
-    <text x="0" y="15" class="category-title">&gt; FRONTEND &amp; UI/UX</text>
-
-    <!-- HTML5 -->
-    <g transform="translate(180, 0)">
-        <rect width="85" height="26" rx="6" fill="#21262d" stroke="#E34F26" stroke-width="1"/>
-        <text x="42" y="17" fill="#E34F26" text-anchor="middle" class="pill-text">HTML5</text>
-    </g>
-
-    <!-- CSS3 -->
-    <g transform="translate(275, 0)">
-        <rect width="80" height="26" rx="6" fill="#21262d" stroke="#1572B6" stroke-width="1"/>
-        <text x="40" y="17" fill="#1572B6" text-anchor="middle" class="pill-text">CSS3</text>
-    </g>
-
-    <!-- Figma -->
-    <g transform="translate(365, 0)">
-        <rect width="90" height="26" rx="6" fill="#21262d" stroke="#F24E1E" stroke-width="1"/>
-        <text x="45" y="17" fill="#F24E1E" text-anchor="middle" class="pill-text">FIGMA</text>
-    </g>
-</g>
-
-<!-- Section 3: Backend & APIs -->
-<g transform="translate(35, 185)">
-    <text x="0" y="15" class="category-title">&gt; BACKEND &amp; APIs</text>
-
-    <!-- APIs -->
-    <g transform="translate(180, 0)">
-        <rect width="80" height="26" rx="6" fill="#21262d" stroke="#B5A4D6" stroke-width="1"/>
-        <text x="40" y="17" fill="#B5A4D6" text-anchor="middle" class="pill-text">APIs</text>
-    </g>
-
-    <!-- Supabase -->
-    <g transform="translate(270, 0)">
-        <rect width="105" height="26" rx="6" fill="#21262d" stroke="#3ECF8E" stroke-width="1"/>
-        <text x="52" y="17" fill="#3ECF8E" text-anchor="middle" class="pill-text">SUPABASE</text>
-    </g>
-
-    <!-- Databases -->
-    <g transform="translate(385, 0)">
-        <rect width="110" height="26" rx="6" fill="#21262d" stroke="#FFB8D1" stroke-width="1"/>
-        <text x="55" y="17" fill="#FFB8D1" text-anchor="middle" class="pill-text">DATABASES</text>
-    </g>
-</g>
-
-<!-- Section 4: Cloud & Deployment -->
-<g transform="translate(35, 255)">
-    <text x="0" y="15" class="category-title">&gt; CLOUD &amp; DEPLOYMENT</text>
-
-    <!-- Vercel -->
-    <g transform="translate(220, 0)">
-        <rect width="90" height="26" rx="6" fill="#21262d" stroke="#E6CCFF" stroke-width="1"/>
-        <text x="45" y="17" fill="#E6CCFF" text-anchor="middle" class="pill-text">VERCEL</text>
-    </g>
-</g>
+  <text x="30" y="91" class="cat">&gt; LANGUAGES</text>
+  <rect x="30" y="98" width="150" height="2" rx="1" fill="url(#rule)"/>
+  <g transform="translate(250,72)"><g class="pill" style="animation-delay:0.00s">
+    <rect width="109" height="30" rx="8" fill="#F7DF1E" fill-opacity="0.10" stroke="#F7DF1E" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#F7DF1E"/>
+    <text x="26" y="19.5" fill="#F7DF1E" class="pill-text">JAVASCRIPT</text>
+  </g></g>
+  <g transform="translate(369,72)"><g class="pill" style="animation-delay:0.07s">
+    <rect width="81" height="30" rx="8" fill="#5B9BD5" fill-opacity="0.10" stroke="#5B9BD5" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#5B9BD5"/>
+    <text x="26" y="19.5" fill="#5B9BD5" class="pill-text">PYTHON</text>
+  </g></g>
+  <g transform="translate(460,72)"><g class="pill" style="animation-delay:0.14s">
+    <rect width="68" height="30" rx="8" fill="#ED8B00" fill-opacity="0.10" stroke="#ED8B00" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#ED8B00"/>
+    <text x="26" y="19.5" fill="#ED8B00" class="pill-text">JAVA</text>
+  </g></g>
+  <g transform="translate(538,72)"><g class="pill" style="animation-delay:0.21s">
+    <rect width="61" height="30" rx="8" fill="#E6CCFF" fill-opacity="0.10" stroke="#E6CCFF" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#E6CCFF"/>
+    <text x="26" y="19.5" fill="#E6CCFF" class="pill-text">SQL</text>
+  </g></g>
+  <g transform="translate(609,72)"><g class="pill" style="animation-delay:0.28s">
+    <rect width="74" height="30" rx="8" fill="#E34F26" fill-opacity="0.10" stroke="#E34F26" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#E34F26"/>
+    <text x="26" y="19.5" fill="#E34F26" class="pill-text">HTML5</text>
+  </g></g>
+  <g transform="translate(693,72)"><g class="pill" style="animation-delay:0.35s">
+    <rect width="68" height="30" rx="8" fill="#33A9DC" fill-opacity="0.10" stroke="#33A9DC" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#33A9DC"/>
+    <text x="26" y="19.5" fill="#33A9DC" class="pill-text">CSS3</text>
+  </g></g>
+  <line x1="30" y1="122" x2="820" y2="122" stroke="#E6CCFF" stroke-opacity="0.08"/>
+  <text x="30" y="157" class="cat">&gt; BACKEND &amp; APIs</text>
+  <rect x="30" y="164" width="150" height="2" rx="1" fill="url(#rule)"/>
+  <g transform="translate(250,138)"><g class="pill" style="animation-delay:0.42s">
+    <rect width="88" height="30" rx="8" fill="#68A063" fill-opacity="0.10" stroke="#68A063" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#68A063"/>
+    <text x="26" y="19.5" fill="#68A063" class="pill-text">NODE.JS</text>
+  </g></g>
+  <g transform="translate(348,138)"><g class="pill" style="animation-delay:0.49s">
+    <rect width="109" height="30" rx="8" fill="#D0D7DE" fill-opacity="0.10" stroke="#D0D7DE" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#D0D7DE"/>
+    <text x="26" y="19.5" fill="#D0D7DE" class="pill-text">EXPRESS.JS</text>
+  </g></g>
+  <g transform="translate(467,138)"><g class="pill" style="animation-delay:0.56s">
+    <rect width="102" height="30" rx="8" fill="#B5A4D6" fill-opacity="0.10" stroke="#B5A4D6" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#B5A4D6"/>
+    <text x="26" y="19.5" fill="#B5A4D6" class="pill-text">REST APIs</text>
+  </g></g>
+  <g transform="translate(579,138)"><g class="pill" style="animation-delay:0.63s">
+    <rect width="95" height="30" rx="8" fill="#3ECF8E" fill-opacity="0.10" stroke="#3ECF8E" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#3ECF8E"/>
+    <text x="26" y="19.5" fill="#3ECF8E" class="pill-text">SUPABASE</text>
+  </g></g>
+  <line x1="30" y1="188" x2="820" y2="188" stroke="#E6CCFF" stroke-opacity="0.08"/>
+  <text x="30" y="223" class="cat">&gt; DESIGN &amp; TOOLS</text>
+  <rect x="30" y="230" width="150" height="2" rx="1" fill="url(#rule)"/>
+  <g transform="translate(250,204)"><g class="pill" style="animation-delay:0.70s">
+    <rect width="74" height="30" rx="8" fill="#A259FF" fill-opacity="0.10" stroke="#A259FF" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#A259FF"/>
+    <text x="26" y="19.5" fill="#A259FF" class="pill-text">FIGMA</text>
+  </g></g>
+  <g transform="translate(334,204)"><g class="pill" style="animation-delay:0.77s">
+    <rect width="61" height="30" rx="8" fill="#F05032" fill-opacity="0.10" stroke="#F05032" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#F05032"/>
+    <text x="26" y="19.5" fill="#F05032" class="pill-text">GIT</text>
+  </g></g>
+  <g transform="translate(405,204)"><g class="pill" style="animation-delay:0.84s">
+    <rect width="81" height="30" rx="8" fill="#E6EDF3" fill-opacity="0.10" stroke="#E6EDF3" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#E6EDF3"/>
+    <text x="26" y="19.5" fill="#E6EDF3" class="pill-text">GITHUB</text>
+  </g></g>
+  <g transform="translate(496,204)"><g class="pill" style="animation-delay:0.91s">
+    <rect width="88" height="30" rx="8" fill="#4DA3FF" fill-opacity="0.10" stroke="#4DA3FF" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#4DA3FF"/>
+    <text x="26" y="19.5" fill="#4DA3FF" class="pill-text">VS CODE</text>
+  </g></g>
+  <line x1="30" y1="254" x2="820" y2="254" stroke="#E6CCFF" stroke-opacity="0.08"/>
+  <text x="30" y="289" class="cat">&gt; CLOUD &amp; DEPLOYMENT</text>
+  <rect x="30" y="296" width="150" height="2" rx="1" fill="url(#rule)"/>
+  <g transform="translate(250,270)"><g class="pill" style="animation-delay:0.98s">
+    <rect width="81" height="30" rx="8" fill="#E6EDF3" fill-opacity="0.10" stroke="#E6EDF3" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#E6EDF3"/>
+    <text x="26" y="19.5" fill="#E6EDF3" class="pill-text">VERCEL</text>
+  </g></g>
+  <g transform="translate(341,270)"><g class="pill" style="animation-delay:1.05s">
+    <rect width="123" height="30" rx="8" fill="#8be9fd" fill-opacity="0.10" stroke="#8be9fd" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#8be9fd"/>
+    <text x="26" y="19.5" fill="#8be9fd" class="pill-text">GITHUB PAGES</text>
+  </g></g>
+  <g transform="translate(474,270)"><g class="pill" style="animation-delay:1.12s">
+    <rect width="137" height="30" rx="8" fill="#58A6FF" fill-opacity="0.10" stroke="#58A6FF" stroke-opacity="0.75" stroke-width="1"/>
+    <circle cx="14" cy="15" r="3.5" fill="#58A6FF"/>
+    <text x="26" y="19.5" fill="#58A6FF" class="pill-text">GITHUB ACTIONS</text>
+  </g></g>
+</svg>
