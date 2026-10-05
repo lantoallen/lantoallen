@@ -52,7 +52,7 @@
   <h3>🛠️ Tech Stack & Toolbox</h3>
   <p><em>The technologies and design systems powering my journey</em></p>
   <br>
-  <img src="tech-stack.svg?v=5" alt="Tech Stack Card" width="100%">
+  <img src="tech-stack.svg?v=6" alt="Tech Stack Card" width="100%">
 </div>
 
 <br>
