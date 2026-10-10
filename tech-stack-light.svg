@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 288" width="100%" style="max-width:850px">
   <style>
-    .label { font: 600 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #8B949E; letter-spacing: 1.5px; }
-    .item  { font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #E6EDF3; }
-    .pill  { fill: #161B22; stroke: #30363D; stroke-width: 1; }
-    .title { font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #6E7681; }
+    .label { font: 600 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #656D76; letter-spacing: 1.5px; }
+    .item  { font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #1F2328; }
+    .pill  { fill: #F6F8FA; stroke: #D0D7DE; stroke-width: 1; }
+    .title { font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #8C959F; }
     .row   { opacity: 0; animation: fade .6s ease-out forwards; }
     @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
   </style>
-  <text x="20" y="24" class="title">~/allen/<tspan fill="#FFB8D1">built-with</tspan><tspan dx="12">· tools I've used across my projects</tspan></text>
+  <text x="20" y="24" class="title">~/allen/<tspan fill="#D6457E">built-with</tspan><tspan dx="12">· tools I've used across my projects</tspan></text>
   <g class="row" style="animation-delay:0.15s">
-    <circle cx="24" cy="68" r="3" fill="#FFB8D1"/>
+    <circle cx="24" cy="68" r="3" fill="#D6457E"/>
     <text x="38" y="72" class="label">LANGUAGES</text>
     <rect x="180" y="54" width="104" height="28" rx="14" class="pill"/>
     <text x="232.0" y="72" class="item" text-anchor="middle">JavaScript</text>
@@ -27,7 +27,7 @@
     <text x="708.5" y="72" class="item" text-anchor="middle">CSS</text>
     </g>
   <g class="row" style="animation-delay:0.27s">
-    <circle cx="24" cy="114" r="3" fill="#FFB8D1"/>
+    <circle cx="24" cy="114" r="3" fill="#D6457E"/>
     <text x="38" y="118" class="label">FRONTEND</text>
     <rect x="180" y="100" width="65" height="28" rx="14" class="pill"/>
     <text x="212.5" y="118" class="item" text-anchor="middle">React</text>
@@ -37,7 +37,7 @@
     <text x="406.0" y="118" class="item" text-anchor="middle">Tailwind CSS</text>
     </g>
   <g class="row" style="animation-delay:0.39s">
-    <circle cx="24" cy="160" r="3" fill="#FFB8D1"/>
+    <circle cx="24" cy="160" r="3" fill="#D6457E"/>
     <text x="38" y="164" class="label">BACKEND</text>
     <rect x="180" y="146" width="81" height="28" rx="14" class="pill"/>
     <text x="220.5" y="164" class="item" text-anchor="middle">Node.js</text>
@@ -49,7 +49,7 @@
     <text x="512.0" y="164" class="item" text-anchor="middle">Supabase</text>
     </g>
   <g class="row" style="animation-delay:0.51s">
-    <circle cx="24" cy="206" r="3" fill="#FFB8D1"/>
+    <circle cx="24" cy="206" r="3" fill="#D6457E"/>
     <text x="38" y="210" class="label">TOOLS</text>
     <rect x="180" y="192" width="65" height="28" rx="14" class="pill"/>
     <text x="212.5" y="210" class="item" text-anchor="middle">Figma</text>
@@ -61,7 +61,7 @@
     <text x="437.5" y="210" class="item" text-anchor="middle">VS Code</text>
     </g>
   <g class="row" style="animation-delay:0.63s">
-    <circle cx="24" cy="252" r="3" fill="#FFB8D1"/>
+    <circle cx="24" cy="252" r="3" fill="#D6457E"/>
     <text x="38" y="256" class="label">DEPLOY</text>
     <rect x="180" y="238" width="73" height="28" rx="14" class="pill"/>
     <text x="216.5" y="256" class="item" text-anchor="middle">Vercel</text>
