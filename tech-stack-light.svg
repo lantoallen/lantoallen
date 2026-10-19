@@ -47,7 +47,11 @@
     <text x="410.0" y="164" class="item" text-anchor="middle">REST APIs</text>
     <rect x="468" y="146" width="88" height="28" rx="14" class="pill"/>
     <text x="512.0" y="164" class="item" text-anchor="middle">Supabase</text>
-    </g>
+    <rect x="566" y="146" width="104" height="28" rx="14" class="pill"/>
+    <text x="618.0" y="164" class="item" text-anchor="middle">PostgreSQL</text>
+    <rect x="680" y="146" width="57" height="28" rx="14" class="pill"/>
+    <text x="708.5" y="164" class="item" text-anchor="middle">Hono</text>
+  </g>
   <g class="row" style="animation-delay:0.51s">
     <circle cx="24" cy="206" r="3" fill="#D6457E"/>
     <text x="38" y="210" class="label">TOOLS</text>
@@ -59,7 +63,11 @@
     <text x="350.5" y="210" class="item" text-anchor="middle">GitHub</text>
     <rect x="397" y="192" width="81" height="28" rx="14" class="pill"/>
     <text x="437.5" y="210" class="item" text-anchor="middle">VS Code</text>
-    </g>
+    <rect x="488" y="192" width="73" height="28" rx="14" class="pill"/>
+    <text x="524.5" y="210" class="item" text-anchor="middle">Vitest</text>
+    <rect x="571" y="192" width="104" height="28" rx="14" class="pill"/>
+    <text x="623.0" y="210" class="item" text-anchor="middle">Playwright</text>
+  </g>
   <g class="row" style="animation-delay:0.63s">
     <circle cx="24" cy="252" r="3" fill="#D6457E"/>
     <text x="38" y="256" class="label">DEPLOY</text>

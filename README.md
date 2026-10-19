@@ -17,9 +17,9 @@
 <br><br><br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="tech-stack.svg?v=12">
-  <source media="(prefers-color-scheme: light)" srcset="tech-stack-light.svg?v=12">
-  <img src="tech-stack-light.svg?v=12" alt="Tools used across my projects: JavaScript, TypeScript, Python, Java, SQL, HTML, CSS, React, Next.js, Tailwind CSS, Node.js, Express, REST APIs, Supabase, Figma, Git, GitHub, VS Code, Vercel, GitHub Pages, GitHub Actions" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="tech-stack.svg?v=13">
+  <source media="(prefers-color-scheme: light)" srcset="tech-stack-light.svg?v=13">
+  <img src="tech-stack-light.svg?v=13" alt="Tools used across my projects: JavaScript, TypeScript, Python, Java, SQL, HTML, CSS, React, Next.js, Tailwind CSS, Node.js, Express, REST APIs, Supabase, PostgreSQL, Hono, Figma, Git, GitHub, Vitest, Playwright, VS Code, Vercel, GitHub Pages, GitHub Actions" width="100%">
 </picture>
 
 <br><br><br>
