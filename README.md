@@ -25,9 +25,9 @@
 <br><br><br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=lantoallen&hide_border=true&background=FFFFFF00&stroke=30363D&ring=FFB8D1&fire=FFB8D1&currStreakNum=FFB8D1&currStreakLabel=E6EDF3&sideNums=E6EDF3&sideLabels=8B949E&dates=6E7681">
-  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=lantoallen&hide_border=true&background=FFFFFF00&stroke=D0D7DE&ring=D6457E&fire=D6457E&currStreakNum=D6457E&currStreakLabel=1F2328&sideNums=1F2328&sideLabels=656D76&dates=8C959F">
-  <img src="https://streak-stats.demolab.com/?user=lantoallen&hide_border=true&background=FFFFFF00&stroke=D0D7DE&ring=D6457E&fire=D6457E&currStreakNum=D6457E&currStreakLabel=1F2328&sideNums=1F2328&sideLabels=656D76&dates=8C959F" alt="GitHub contribution streak" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=lantoallen&v=2&hide_border=true&background=FFFFFF00&stroke=30363D&ring=FFB8D1&fire=FFB8D1&currStreakNum=FFB8D1&currStreakLabel=E6EDF3&sideNums=E6EDF3&sideLabels=8B949E&dates=6E7681">
+  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=lantoallen&v=2&hide_border=true&background=FFFFFF00&stroke=D0D7DE&ring=D6457E&fire=D6457E&currStreakNum=D6457E&currStreakLabel=1F2328&sideNums=1F2328&sideLabels=656D76&dates=8C959F">
+  <img src="https://streak-stats.demolab.com/?user=lantoallen&v=2&hide_border=true&background=FFFFFF00&stroke=D0D7DE&ring=D6457E&fire=D6457E&currStreakNum=D6457E&currStreakLabel=1F2328&sideNums=1F2328&sideLabels=656D76&dates=8C959F" alt="GitHub contribution streak" width="100%">
 </picture>
 
 <br><br>
