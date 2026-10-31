@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 288" width="100%" style="max-width:850px">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 334" width="100%" style="max-width:850px">
   <style>
     .label { font: 600 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #656D76; letter-spacing: 1.5px; }
     .item  { font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #1F2328; }
@@ -43,39 +43,47 @@
     <text x="220.5" y="164" class="item" text-anchor="middle">Node.js</text>
     <rect x="271" y="146" width="81" height="28" rx="14" class="pill"/>
     <text x="311.5" y="164" class="item" text-anchor="middle">Express</text>
-    <rect x="362" y="146" width="96" height="28" rx="14" class="pill"/>
-    <text x="410.0" y="164" class="item" text-anchor="middle">REST APIs</text>
-    <rect x="468" y="146" width="88" height="28" rx="14" class="pill"/>
-    <text x="512.0" y="164" class="item" text-anchor="middle">Supabase</text>
-    <rect x="566" y="146" width="104" height="28" rx="14" class="pill"/>
-    <text x="618.0" y="164" class="item" text-anchor="middle">PostgreSQL</text>
-    <rect x="680" y="146" width="57" height="28" rx="14" class="pill"/>
-    <text x="708.5" y="164" class="item" text-anchor="middle">Hono</text>
-  </g>
+    <rect x="362" y="146" width="57" height="28" rx="14" class="pill"/>
+    <text x="390.5" y="164" class="item" text-anchor="middle">Hono</text>
+    <rect x="429" y="146" width="96" height="28" rx="14" class="pill"/>
+    <text x="477.0" y="164" class="item" text-anchor="middle">REST APIs</text>
+    </g>
   <g class="row" style="animation-delay:0.51s">
     <circle cx="24" cy="206" r="3" fill="#D6457E"/>
-    <text x="38" y="210" class="label">TOOLS</text>
-    <rect x="180" y="192" width="65" height="28" rx="14" class="pill"/>
-    <text x="212.5" y="210" class="item" text-anchor="middle">Figma</text>
-    <rect x="255" y="192" width="49" height="28" rx="14" class="pill"/>
-    <text x="279.5" y="210" class="item" text-anchor="middle">Git</text>
-    <rect x="314" y="192" width="73" height="28" rx="14" class="pill"/>
-    <text x="350.5" y="210" class="item" text-anchor="middle">GitHub</text>
-    <rect x="397" y="192" width="81" height="28" rx="14" class="pill"/>
-    <text x="437.5" y="210" class="item" text-anchor="middle">VS Code</text>
-    <rect x="488" y="192" width="73" height="28" rx="14" class="pill"/>
-    <text x="524.5" y="210" class="item" text-anchor="middle">Vitest</text>
-    <rect x="571" y="192" width="104" height="28" rx="14" class="pill"/>
-    <text x="623.0" y="210" class="item" text-anchor="middle">Playwright</text>
-  </g>
+    <text x="38" y="210" class="label">DATA</text>
+    <rect x="180" y="192" width="104" height="28" rx="14" class="pill"/>
+    <text x="232.0" y="210" class="item" text-anchor="middle">PostgreSQL</text>
+    <rect x="294" y="192" width="88" height="28" rx="14" class="pill"/>
+    <text x="338.0" y="210" class="item" text-anchor="middle">Supabase</text>
+    <rect x="392" y="192" width="112" height="28" rx="14" class="pill"/>
+    <text x="448.0" y="210" class="item" text-anchor="middle">Drizzle ORM</text>
+    </g>
   <g class="row" style="animation-delay:0.63s">
     <circle cx="24" cy="252" r="3" fill="#D6457E"/>
-    <text x="38" y="256" class="label">DEPLOY</text>
-    <rect x="180" y="238" width="73" height="28" rx="14" class="pill"/>
-    <text x="216.5" y="256" class="item" text-anchor="middle">Vercel</text>
-    <rect x="263" y="238" width="120" height="28" rx="14" class="pill"/>
-    <text x="323.0" y="256" class="item" text-anchor="middle">GitHub Pages</text>
-    <rect x="393" y="238" width="135" height="28" rx="14" class="pill"/>
-    <text x="460.5" y="256" class="item" text-anchor="middle">GitHub Actions</text>
+    <text x="38" y="256" class="label">TOOLS</text>
+    <rect x="180" y="238" width="65" height="28" rx="14" class="pill"/>
+    <text x="212.5" y="256" class="item" text-anchor="middle">Figma</text>
+    <rect x="255" y="238" width="49" height="28" rx="14" class="pill"/>
+    <text x="279.5" y="256" class="item" text-anchor="middle">Git</text>
+    <rect x="314" y="238" width="73" height="28" rx="14" class="pill"/>
+    <text x="350.5" y="256" class="item" text-anchor="middle">GitHub</text>
+    <rect x="397" y="238" width="81" height="28" rx="14" class="pill"/>
+    <text x="437.5" y="256" class="item" text-anchor="middle">VS Code</text>
+    <rect x="488" y="238" width="73" height="28" rx="14" class="pill"/>
+    <text x="524.5" y="256" class="item" text-anchor="middle">Vitest</text>
+    <rect x="571" y="238" width="104" height="28" rx="14" class="pill"/>
+    <text x="623.0" y="256" class="item" text-anchor="middle">Playwright</text>
+    </g>
+  <g class="row" style="animation-delay:0.75s">
+    <circle cx="24" cy="298" r="3" fill="#D6457E"/>
+    <text x="38" y="302" class="label">DEPLOY</text>
+    <rect x="180" y="284" width="73" height="28" rx="14" class="pill"/>
+    <text x="216.5" y="302" class="item" text-anchor="middle">Vercel</text>
+    <rect x="263" y="284" width="166" height="28" rx="14" class="pill"/>
+    <text x="346.0" y="302" class="item" text-anchor="middle">Cloudflare Workers</text>
+    <rect x="439" y="284" width="120" height="28" rx="14" class="pill"/>
+    <text x="499.0" y="302" class="item" text-anchor="middle">GitHub Pages</text>
+    <rect x="569" y="284" width="135" height="28" rx="14" class="pill"/>
+    <text x="636.5" y="302" class="item" text-anchor="middle">GitHub Actions</text>
     </g>
 </svg>
